@@ -14,6 +14,7 @@ class ListesQuestions extends StatefulWidget {
 
 class _ListesQuestionsState extends State<ListesQuestions> {
   List<Map<String, dynamic>> listesDesDonnees = Donnees.mesDonnees;
+  List<String> Alphabet = ['A','B','C'];
   int i = 0;
   Color check = Colors.green;
   Color checkBlack = Colors.black;
@@ -133,12 +134,12 @@ class _ListesQuestionsState extends State<ListesQuestions> {
   @override
   void initState() {
     i = 0;
-   isShow = true;
+    isShow = true;
 
- score = 10;
-   page = 0;
+    score = 10;
+    page = 0;
 
-   second = 10;
+    second = 10;
 
 //  for (var index = 0; index < 3; index++) {
 //      setState(() {
@@ -223,7 +224,7 @@ class _ListesQuestionsState extends State<ListesQuestions> {
                         borderRadius: BorderRadius.circular(200)),
                     child: ListTile(
                       // key:question ,
-                      leading: Text(index.toString()),
+                      leading: Text(Alphabet[index]),
                       title: Text(question),
                       trailing: isShow == true
                           ? Checkbox(
